@@ -1,4 +1,22 @@
-﻿/*API CONVENCIONAL - DESKTOP*/
+﻿/*BOTÃO ESQUERDO 'FALE CONOSCO'*/
+.fale-conosco-btn {
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 40vh;
+    background: #ca3737;
+    z-index: 99999999999;
+    color: white;
+    padding: 10px 15px;
+    font-weight: 500;
+    left: -38px;
+}
+
+.fale-conosco-btn:hover, .fale-conosco-btn:focus{
+    color: white;
+    text-decoration: none;
+}
+
+/*API CONVENCIONAL - DESKTOP*/
 .whatsapp-btn {
     background-color: #2ab200;
     padding: 10px 5px;
