@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Whatsapp</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo-whats.css">
+</head>
+<body>
+    <!-- API COMUM DESKTOP - >= 768px-->
+    <!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
+    <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whatsapp-btn" target="_blank">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-whatsapp"></i>
+            </div>
+            <div class="col-9">
+                Clique aqui!
+            </div>
+        </div>
+    </a>
+    <!-- API DESKTOP - GRANDE - >= 768px-->
+    <span id="btn_close_whats" onclick="CloseLargeApi()">X</span>
+    <!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
+    <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whats-btn-large whatsapp-btn" id="whats-btn-large" target="_blank">
+        <div class="row">
+            <div>
+                <i class="fa fa-whatsapp"></i>
+            </div>
+            <div>
+                Clique aqui e Peça seu Orçamento!
+            </div>
+        </div>
+    </a>
+    <!-- API MOBILE - < 768px -->
+    <!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
+    <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp-mobile.html" class="whatsapp-btn whats-mobile" target="_blank">
+        <div>
+            <i class="fa fa-whatsapp"></i>
+        </div>
+        <div>
+            Clique aqui e Peça seu Orçamento!
+        </div>
+    </a>
+
+    <!-- SCRIPT DE FECHAMENTO-->
+    <script type="text/javascript">
+        function CloseLargeApi(){
+            document.getElementById("btn_close_whats").style.display = "none";
+            document.getElementById("whats-btn-large").style.display = "none";
+        }
+    </script>
+</body>
+</html>

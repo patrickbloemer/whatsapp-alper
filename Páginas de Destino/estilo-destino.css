@@ -1,0 +1,46 @@
+body{
+	margin: 0;
+	font-family: calibri;
+}
+h3{
+	font-weight: 300;
+	font-size: 20px;
+}
+.row{
+	width: 100%;
+}
+.col-md-6{
+	width: 50%;
+	max-width: 50%;
+}
+@media(max-width: 768px){
+	.col-sm-12{
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+}
+.col{
+	float: left;
+}
+/*SIDES*/
+/*LEFT*/
+/* SUBSTITUIR A SEQUENCIA DE 'X' PELO LINK DE UMA IMAGEM DO PRÓPRIO SITE (ALTA RESULUÇÃO, POIS FICARÁ AO FUNDO) */
+.left-side {
+	/*RECOMENDA-SE TROCAR OS RGBAs POR UMA COR COMPATÍVEL COM A LOGO DA EMPRESA*/
+    background-image: linear-gradient(to bottom, rgba(21, 63, 150, 0.5), rgba(21, 63, 150, 0.5)), url('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+    height: 100vh;
+    background-size: cover;
+}
+/*RIGHT*/
+.right-side{
+	text-align: center;
+	padding-top: 30vh;
+}
+@media(max-width: 768px){
+	.left-side{
+		height: 45vh;
+	}
+	.right-side{
+		padding-top: 5vh;
+	}
+}
