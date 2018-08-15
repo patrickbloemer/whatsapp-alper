@@ -19,7 +19,7 @@
 /*API CONVENCIONAL - DESKTOP*/
 .whatsapp-btn {
     background-color: #2ab200;
-    padding: 10px 5px;
+    padding: 10px 5px 7px;
     position: fixed;
     float: right;
     right: -145px;
@@ -32,7 +32,7 @@
     text-align: center;
     font-size: 20px;
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: .5s;
     z-index: 999999999;
     font-weight: 500;
     font-family: calibri;
@@ -41,7 +41,7 @@
 .whatsapp-btn:hover{
 	right: -30px;
 	transition-property: all;
-	transition-duration: 1s;
+	transition-duration: .5s;
 }
 .fa-whatsapp:before {
     font-size: 28px;
