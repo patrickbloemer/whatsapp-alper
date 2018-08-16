@@ -34,7 +34,7 @@ h3{
 /*RIGHT*/
 .right-side{
 	text-align: center;
-	padding-top: 30vh;
+	padding-top: 20vh;
 }
 @media(max-width: 768px){
 	.left-side{
@@ -46,8 +46,8 @@ h3{
 }
 
 body > div > div.col.col-sm-12.col-md-6.right-side > a {
-    background: white;
+    background: #17171C;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 10px 10px;
 }
