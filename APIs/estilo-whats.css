@@ -94,9 +94,12 @@
 @media(min-width: 768px){
     /*API WHATSAPP*/
     .whats-btn-large{
-        right: 0 !important;
+        right: 0;
         display: block;
         width: 150px !important;
+    }
+    .whats-btn-large:hover{
+    	right: 0;
     }
     #btn_close_whats {
         position: fixed;
@@ -107,9 +110,11 @@
         width: 20px;
         cursor: pointer;
         text-align: center;
-        display: block;
+        display: block !important;
         z-index: 99999999999;
         color: white;
         font-weight: 600;
+        transition-property: all;
+		transition-duration: .5s;
     }
 }
