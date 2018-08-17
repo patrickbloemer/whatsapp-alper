@@ -10,12 +10,10 @@
     font-weight: 500;
     left: -38px;
 }
-
 .fale-conosco-btn:hover, .fale-conosco-btn:focus{
     color: white;
     text-decoration: none;
 }
-
 /*API CONVENCIONAL - DESKTOP*/
 .whatsapp-btn {
     background-color: #2ab200;
@@ -63,7 +61,6 @@
     margin-top: 3px;
     text-align: left;
 }
-
 /*API PARA DISPOSITIVOS MOBILES*/
 @media(max-width: 768px){
 	.whatsapp-btn {
@@ -87,7 +84,6 @@
        right: 0;
     }
 }
-
 /*CSS PARA API MAIOR*/
 /*ESTE CÓDIGO DEVE SER INSERIDO APENAS EM PÁGINAS ONDE A API MAIOR DEVE SER EXIBIDA*/
 /*INSERIR ESTE ARQUIVO CSS COMPLETO APENAS CASO A API MAIOR DEVA SER EXIBIDA EM TODAS AS PÁGINAS DO SITE*/
