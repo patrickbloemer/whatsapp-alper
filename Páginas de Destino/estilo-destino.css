@@ -34,7 +34,7 @@ h3{
 /*RIGHT*/
 .right-side{
 	text-align: center;
-	padding-top: 20vh;
+	padding-top: 30vh;
 }
 @media(max-width: 768px){
 	.left-side{
