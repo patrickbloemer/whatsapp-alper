@@ -1,4 +1,0 @@
-Arquivo INDEX.HTML
-	- Contém o código com as 3 APIs (API Grande com Descritivo, API Convencional e API Mobile com Descritivo);
-	- Utilizar apenas o código dentro da body;
-	- 
