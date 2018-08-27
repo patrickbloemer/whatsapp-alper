@@ -38,7 +38,7 @@ h3{
 }
 @media(max-width: 768px){
 	.left-side{
-		height: 25vh;
+		height: 35vh;
 	}
 	.right-side{
 		padding-top: 5vh;
