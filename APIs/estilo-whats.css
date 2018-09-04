@@ -83,6 +83,9 @@
     .whatsapp-btn:hover {
        right: 0;
     }
+    footer {
+        padding-bottom: 75px !important;
+    }
 }
 /*CSS PARA API MAIOR*/
 /*ESTE CÓDIGO DEVE SER INSERIDO APENAS EM PÁGINAS ONDE A API MAIOR DEVE SER EXIBIDA*/
