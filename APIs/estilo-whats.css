@@ -41,8 +41,9 @@
 	transition-property: all;
 	transition-duration: .5s;
 }
-.fa-whatsapp:before {
+.whatsapp-btn .fa-whatsapp:before {
     font-size: 28px;
+    width: 100%;
 }
 .whats-mobile{
 	display: none;
