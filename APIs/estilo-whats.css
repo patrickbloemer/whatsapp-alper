@@ -9,6 +9,7 @@
     padding: 10px 15px;
     font-weight: 500;
     left: -38px;
+    font-family: calibri;
 }
 .fale-conosco-btn:hover, .fale-conosco-btn:focus{
     color: white;
@@ -33,7 +34,6 @@
     transition-duration: .5s;
     z-index: 999999999;
     font-weight: 500;
-    font-family: calibri;
     font-size: 17px;
 }
 .whatsapp-btn:hover{
@@ -116,5 +116,6 @@
         font-weight: 600;
         transition-property: all;
 		transition-duration: .5s;
+		font-family: calibri;
     }
 }
