@@ -119,3 +119,11 @@
 		font-family: calibri;
     }
 }
+
+/*CSS ADICIONAL*/
+/*LOGO DA FOOTER*/
+.footer-copyright img {
+    max-width: 50px !important;
+    position: absolute !important;
+    margin-left: 3px !important;
+}
