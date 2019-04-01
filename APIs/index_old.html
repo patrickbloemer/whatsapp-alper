@@ -8,23 +8,6 @@
 </head>
 <body>
     <style type="text/css">
-    /*BOTÃO ESQUERDO 'FALE CONOSCO'*/
-    .fale-conosco-btn {
-        transform: rotate(-90deg);
-        position: fixed;
-        top: 40vh;
-        background: #ca3737;
-        z-index: 99999999999;
-        color: white;
-        padding: 10px 15px;
-        font-weight: 500;
-        left: -38px;
-        font-family: calibri;
-    }
-    .fale-conosco-btn:hover, .fale-conosco-btn:focus{
-        color: white;
-        text-decoration: none;
-    }
     /*API CONVENCIONAL - DESKTOP*/
     .whatsapp-btn {
         background-color: #2ab200;
@@ -138,11 +121,7 @@
         margin-left: 3px !important;
     }
 </style>
-<!-- BOTÃO LATERAL ESQUERDO - FALE CONOSCO -->
-<!-- SUBSTITUIA A SEQUÊNCIA DE 'X' PELA URL DO SITE (CONFIRMAR SE O SLUG DA PÁGINA DE CONTATO É REALMENTE 'CONTATO') -->
-<a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/contato" class="fale-conosco-btn" target="_blank">Fale Conosco</a>
 <!-- API COMUM DESKTOP - >= 768px-->
-<!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
 <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whatsapp-btn" target="_blank">
     <div class="row">
         <div class="col-3">
@@ -155,7 +134,6 @@
 </a>
 <!-- API DESKTOP - GRANDE - >= 768px-->
 <span id="btn_close_whats" onclick="CloseLargeApi()">X</span>
-<!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
 <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whats-btn-large whatsapp-btn" id="whats-btn-large" target="_blank">
     <div class="row">
         <div>
@@ -167,7 +145,6 @@
     </div>
 </a>
 <!-- API MOBILE - < 768px -->
-<!-- TROCAR SEQUÊNCIA DE 'X' PELA URL DO SITE -->
 <a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp-mobile.html" class="whatsapp-btn whats-mobile" target="_blank">
     <div>
         <i class="fa fa-whatsapp"></i>
@@ -176,7 +153,6 @@
         Clique aqui e Peça seu Orçamento!
     </div>
 </a>
-
 <!-- SCRIPT DE FECHAMENTO-->
 <script type="text/javascript">
     function CloseLargeApi(){
