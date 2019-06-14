@@ -26,6 +26,13 @@ ob_start();
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API de Contato 6.0.0</title>
+	<meta charset="utf-8">
+</head>
+<body>
 <style type="text/css">
     /*VARIABLES APPLICATION*/
     #api-contact-block, #btn-close-api-contact-block, .api-contact-cards, .api-contact-mobile{
@@ -232,6 +239,9 @@ ob_start();
 	}
 	.modal-body input, .modal-body textarea {
 		color: #000;
+		background-color: white;
+		border-radius: 5px;
+		border: 1px solid <?php echo $cor;?>;
 	}
 	.modal-content form p{
 		margin: 0 0 10px;
@@ -246,6 +256,9 @@ ob_start();
 		width: 50%;
 		text-align: center;
 		box-shadow: 0 24px 38px 10px rgba(0,0,0,0.15), 0 9px 46px 8px rgba(0,0,0,0.22), 0 11px 15px -7px rgba(0,0,0,0.2);
+		border: none !important;
+		background-color: <?php echo $cor;?>;
+		margin: auto;
 	}
 	@media(max-width: 599px){
 		.modal-header {
@@ -272,7 +285,7 @@ ob_start();
 <div id="api-contact">
 	<!-- BEGIN API BLOCK -->
 	<div id="btn-close-api-contact-block" onclick="close_api_contact_block()">
-		<span>X</span>
+		<span>&times;</span>
 	</div>
 	<div id="api-contact-block">
 		<div class="api-contact-header">
@@ -373,7 +386,9 @@ ob_start();
 	// MODAL
 	function open_modal_email(){document.getElementById("email-modal").style.opacity="1", document.getElementById("email-modal").style.visibility="visible"}
 	function close_modal_email(){document.getElementById("email-modal").style.opacity="0", document.getElementById("email-modal").style.visibility="hidden"}
-</script>		
+</script>	
+</body>
+</html>
 
 <?php
 $html = ob_get_contents();
