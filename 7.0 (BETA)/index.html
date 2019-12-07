@@ -1,0 +1,286 @@
+<div id="api-contato">
+	<style type="text/css">
+		.api_contato_mobile_float {
+			background: green;
+			color: white;
+			text-decoration: none;
+			padding: 30px;
+			border-radius: 50%;
+			position: fixed;
+			bottom: 15px;
+			right: 15px;
+			z-index: 999999999999;
+		}
+		.api_contato_mobile li {
+			list-style: none;
+			margin-top: 50px;
+			z-index: 9999999999999;
+		}
+		.api_contato_mobile ul {
+			padding: 0;
+			margin: 0;
+		}
+		.api_contato_mobile li a, .api_contato_mobile li div {
+			background: red;
+			padding: 20px;
+			border-radius: 50%;
+			text-decoration: none;
+			color: white;
+		}
+		.api_contato_mobile li div {
+			padding: 18px;
+		}
+		i.fa.fa-times {
+			font-size: 21px;
+		}
+		#close_options{
+			display: none;
+		}
+		li#whatsapp_option {
+			position: fixed;
+			bottom: 125px;
+			right: -65px;
+			transition-property: all;
+			transition-duration: .2s;
+		}
+		#whatsapp_option a{
+			background-color: #43a047;
+		}
+		li#telefone_option {
+			position: fixed;
+			bottom: 190px;
+			right: -65px;
+			transition-property: all;
+			transition-duration: .4s;
+		}
+		#telefone_option a{
+			background-color: #039be5;
+		}
+		li#email_option {
+			bottom: 235px;
+			position: fixed;
+			right: -65px;
+			transition-property: all;
+			transition-duration: .6s;
+		}
+		#email_option div{
+			background-color: #e53935;
+		}
+		@media(max-width: 599px){
+			.api_contato_mobile{
+				display: block;
+			}
+			.api_contato_desktop{
+				display: none;
+			}
+		}
+		@media(min-width: 600px){
+			.api_contato_mobile{
+				display: none;
+			}
+			.api_contato_desktop{
+				display: block;
+			}
+		}
+
+
+		/*API DESKTOP*/
+		#api_contato_desktop_block {
+			background: rgba(30, 130, 76, 1);
+			padding: 15px 20px;
+			position: fixed;
+			right: 0;
+			top: 30vh;
+			color: white;
+			text-align: center;
+			font-family: 'Calibri';
+			z-index: 99999999;
+			border-bottom-left-radius: 5px;
+			box-shadow: 0 24px 38px 10px rgba(0, 0, 0, .15), 0 9px 46px 8px rgba(0, 0, 0, .22), 0 11px 15px -7px rgba(0, 0, 0, .2);
+			transition-property: all;
+			transition-duration: .5s;
+			width: 150px;
+		}
+		#api_contato_desktop_block a {
+			color: black;
+			text-decoration: none;
+			background-color: white;
+			padding: 10px;
+			border-radius: 3px;
+		}
+		.api-contact-section {
+			margin-top: 15px;
+			margin-bottom: 25px;
+		}
+		.api-contact-section-title {
+			margin-bottom: 15px;
+		}
+		#btn-close-api-contact-block {
+			background: rgba(30, 130, 76, 1);
+			padding: 2px 8px;
+			position: fixed;
+			right: 150px;
+			top: 30vh;
+			color: white;
+			font-family: 'calibri';
+			font-size: 20px;
+			z-index: 999999999;
+			border-bottom-left-radius: 5px;
+			cursor: pointer;
+			transition-property: all;
+			transition-duration: .5s;
+		}
+		#api-contato hr {
+			width: 100px;
+			border-top: 2px solid white;
+		}
+		#api-contato .fa-whatsapp, #api-contato .fa-envelope {
+			font-size: 20px;
+		}
+		/*SIDEBAR*/
+		#sidebar_email {
+			height: 100vh;
+			background: #17171C;
+			color: white;
+			padding: 25px;
+			font-family: 'calibri';
+			text-align: center;
+			width: 70%;
+			right: -85%;
+			position: fixed;
+			z-index: 9999999999;
+			transition-property: all;
+			transition-duration: .5s;
+		}
+		#sidebar_email h2{
+			margin: 0;
+		}
+		body{
+			margin: 0;
+		}
+		div#sidebar_email span {
+			color: white;
+			padding: 5px 10px;
+			float: right;
+			font-size: 20px;
+		}
+		div#sidebar_email span {
+			background: red;
+			color: white;
+			padding: 5px 10px;
+			float: right;
+			font-size: 20px;
+		}
+		/*CARDS*/
+		.api-contact-cards {
+			background: rgba(30, 130, 76, 1);
+			color: white;
+			position: fixed;
+			z-index: 9999999;
+			padding: 15px 50px 15px 15px;
+			right: -35px;
+			top: 30vh;
+			border-radius: 5px;
+		}
+		.api-contact-whatsapp-card {
+			margin-bottom: 10px;
+		}
+		.api_contato_mobile_float_options i {
+			font-size: 20px;
+		}
+	</style>
+	<!-- API DESKTOP -->
+	<div class="api_contato_desktop">
+		<!-- API GRANDE -->
+		<div id="btn-close-api-contact-block" onclick="close_api_contact_block()"> <span>&times</span></div>
+		<div id="api_contato_desktop_block">
+			<div class="api-contact-header"> <span>Fale Conosco</span>
+				<hr>
+			</div>
+			<div class="api-contact-body">
+				<div class="api-contact-whatsapp-section">
+					<div class="api-contact-section">
+						<div class="api-contact-section-icon"> <i class="fa fa-whatsapp"></i></div>
+						<div class="api-contact-section-title"> <span>Whatsapp</span></div>
+						<div class="api-contact-section-button"> <a href="https://web.whatsapp.com/send?l=pt_br&phone=XXXXXXXXXXXXXXXXXXXXXXX&text=Olá%2C%20gostaria%20de%20maiores%20informações" class="btn-api-contact" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Clique aqui</a></div>
+					</div>
+				</div>
+				<div class="api-contact-email-section">
+					<div class="api-contact-section">
+						<div class="api-contact-section-icon"> <i class="fa fa-envelope"></i></div>
+						<div class="api-contact-section-title"> <span>E-mail</span></div>
+						<div class="api-contact-section-button"> <a href="#" class="btn-api-contact" onclick="open_modal_email()">Clique aqui</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- API PEQUENA -->
+		<div class="api-contact-cards" onmouseover="open_block()">
+			<div class="api-contact-whatsapp-card">
+				<i class="fa fa-whatsapp"></i>
+			</div>
+			<div class="api-contact-email-card">
+				<i class="fa fa-envelope"></i>
+			</div>
+		</div>
+		<!-- SCRIPTS -->
+		<script type="text/javascript">
+			function close_api_contact_block() {
+				document.getElementById("api_contato_desktop_block").style.right="-210px",
+				document.getElementById("btn-close-api-contact-block").style.right="-210px"
+			}
+			function open_block() {
+				document.getElementById("api_contato_desktop_block").style.right="0px",
+				document.getElementById("btn-close-api-contact-block").style.right="150px"
+			}
+		</script>
+	</div>
+	<!-- API MOBILE -->
+	<div class="api_contato_mobile">
+		<div onclick="open_options();" id="open_options" class="api_contato_mobile_float"><i class="fa fa-whatsapp"></i></div>
+		<div onclick="close_options();" id="close_options" class="api_contato_mobile_float"><i class="fa fa-times"></i></div>
+		<div class="api_contato_mobile_float_options">
+			<ul>
+				<li id="email_option" onclick="open_sidebar_email();"><div><i class="fa fa-envelope"></i></div></li>
+				<li id="telefone_option"><a href="tel:XXXXXXXXXXXXXXXXXXXXXXX"><i class="fa fa-phone"></i></a></li>
+				<li id="whatsapp_option"><a href="https://api.whatsapp.com/send?l=pt_br&phone=XXXXXXXXXXXXXXXXXXXXXXX&text=Olá%2C%20gostaria%20de%20maiores%20informações" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});"><i class="fa fa-whatsapp"></i></a></li>
+			</ul>
+		</div>
+		<!-- SCRIPTS -->
+		<script type="text/javascript">
+			function open_options(){
+				document.getElementById('email_option').style.right = '25px';
+				document.getElementById('telefone_option').style.right = '25px';
+				document.getElementById('whatsapp_option').style.right = '25px';
+				document.getElementById('close_options').style.display = 'block';
+				document.getElementById('open_options').style.display = 'none';
+			}
+			function close_options(){
+				document.getElementById('email_option').style.right = '-65px';
+				document.getElementById('telefone_option').style.right = '-65px';
+				document.getElementById('whatsapp_option').style.right = '-65px';
+				document.getElementById('close_options').style.display = 'none';
+				document.getElementById('open_options').style.display = 'block';
+			}
+		</script>
+	</div>
+	<!-- SIDEBAR EMAIL -->
+	<div id="sidebar_email">
+		<div class="sidebar_email_header" onclick="close_sidebar_email();">
+			<span>&times</span>
+			<h2>Formulário de Contato</h2>
+		</div>
+		<div class="sidebar_email_body">
+			<?php echo do_shortcode('XXXXXXXXXXXXXXXXXXXXXXX');?>
+		</div>
+		<!-- SCRIPTS -->
+		<script type="text/javascript">
+			function open_sidebar_email(){
+				document.getElementById('sidebar_email').style.right = '0%';
+			}
+			function close_sidebar_email(){
+				document.getElementById('sidebar_email').style.right = '-85%';
+			}
+		</script>
+	</div>
+</div>
