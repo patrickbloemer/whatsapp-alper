@@ -1,5 +1,5 @@
 <div id="api-contato">
-	<!-- E-MAIL -->
+	<!-- CONVERSÃO DO E-MAIL -->
 	<script type="text/javascript">
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
 			gtag('event', 'Envio', { 'event_category': 'Contato', 'event_label': 'Formulário', 'value': 1 });
@@ -17,10 +17,9 @@
 			bottom: 15px;
 			right: 15px;
 			z-index: 999999999999;
-			padding: 0;
 			width: 75px;
 			height: 75px;
-			padding: 24px;
+			padding: 22px;
 			font-size: 20px !important;
 			text-align: center;
 		}
@@ -136,7 +135,7 @@
 			margin-bottom: 15px;
 		}
 		.api-contact-email-section .api-contact-section-title {
-    		margin-bottom: 5px;
+			margin-bottom: 5px;
 		}
 		#btn-close-api-contact-block {
 			background: rgba(30, 130, 76, 1);
@@ -211,13 +210,13 @@
 			height: 35px;
 			padding: 5px !important;
 			background: #fff;
-			border: 2px solid #ff636a;
+			border: 2px solid #000;
 			color: #000;
 			border-radius: 5px;
 		}
 		#sidebar_email textarea{
 			background: #fff;
-			border: 2px solid #ff636a;
+			border: 2px solid #000;
 			color: #000;
 			padding: 5px !important;
 			border-radius: 5px;
@@ -235,7 +234,7 @@
 			padding-bottom: 60px;
 		}
 		#sidebar_email .wpcf7-submit {
-			background: #ff636a;
+			background: #000;
 			color: #fff;
 		}
 		/*PELÍCULA SIDEBAR*/
@@ -315,7 +314,7 @@
 					<div class="api-contact-section">
 						<div class="api-contact-section-icon"> <i class="fa fa-whatsapp"></i></div>
 						<div class="api-contact-section-title"> <span>Whatsapp</span></div>
-						<div class="api-contact-section-button"> <a href="https://web.whatsapp.com/send?l=pt_br&phone=5541997255270&text=Olá%2C%20gostaria%20de%20maiores%20informações" class="btn-api-contact" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Clique aqui</a></div>
+						<div class="api-contact-section-button"> <a href="https://web.whatsapp.com/send?l=pt_br&phone=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&text=Olá%2C%20gostaria%20de%20maiores%20informações" class="btn-api-contact" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Clique aqui</a></div>
 					</div>
 				</div>
 				<div class="api-contact-email-section">
@@ -355,8 +354,8 @@
 		<div class="api_contato_mobile_float_options">
 			<ul>
 				<li id="email_option" onclick="open_sidebar_email();"><div><i class="fa fa-envelope"></i></div></li>
-				<li id="telefone_option"><a href="tel:041997255270" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1});"><i class="fa fa-phone"></i></a></li>
-				<li id="whatsapp_option"><a href="https://api.whatsapp.com/send?l=pt_br&phone=5541997255270&text=Olá%2C%20gostaria%20de%20maiores%20informações" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});"><i class="fa fa-whatsapp"></i></a></li>
+				<li id="telefone_option"><a href="tel:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1});"><i class="fa fa-phone"></i></a></li>
+				<li id="whatsapp_option"><a href="https://api.whatsapp.com/send?l=pt_br&phone=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&text=Olá%2C%20gostaria%20de%20maiores%20informações" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});"><i class="fa fa-whatsapp"></i></a></li>
 			</ul>
 		</div>
 		<!-- SCRIPTS -->
@@ -396,7 +395,7 @@
 			<br>
 		</div>
 		<div class="sidebar_email_body">
-			<?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]');?>
+			<?php echo do_shortcode('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');?>
 		</div>
 		<!-- SCRIPTS -->
 		<script type="text/javascript">
@@ -415,4 +414,3 @@
 	<!-- PELÍCULA ESCURA -->
 	<div id="pelicula_sidebar_email" onclick="close_sidebar_email();"></div>
 </div>
-
