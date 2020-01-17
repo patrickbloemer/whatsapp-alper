@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Whatsapp | 3.0.0</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo-whats.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style type="text/css">
+	.whatsapp-btn{background-color:#2ab200;padding:10px 5px 7px;position:fixed;float:right;right:-145px;width:200px;top:35vh;text-decoration:none!important;color:#fff!important;font-weight:100;font-family:calibri;text-align:center;font-size:20px;transition-property:all;transition-duration:.5s;z-index:999999999;font-weight:500;font-size:17px}.whatsapp-btn:hover{right:-30px;transition-property:all;transition-duration:.5s}.whatsapp-btn .fa-whatsapp:before{font-size:28px;width:100%}.whats-mobile{display:none}.whatsapp-btn .row{width:100%;margin:0!important}.col-3{float:left;width:25%}.col-9{float:right;width:70%;margin-top:3px;text-align:left}@media(max-width:767px){.whatsapp-btn{display:none}#btn_close_whats{display:none}.whats-mobile{display:block;width:100%;position:fixed;top:auto;bottom:0;right:0;padding:5px;font-size:17.5px;font-weight:500}.whatsapp-btn:hover{right:0}footer{padding-bottom:75px!important}}@media(min-width:768px){.whats-btn-large{right:0;display:block;width:150px!important}.whats-btn-large:hover{right:0}#btn_close_whats{position:fixed;right:150px;background:#2ab200;top:35vh;padding:5px;width:20px;cursor:pointer;text-align:center;display:block!important;z-index:99999999999;color:#fff;font-weight:600;transition-property:all;transition-duration:.5s;font-family:calibri}}.footer-copyright img{max-width:50px!important;position:absolute!important;margin-left:3px!important}
+</style>
+<!-- API COMUM DESKTOP - >= 768px-->
+<a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whatsapp-btn" target="_blank">
+    <div class="row">
+        <div class="col-3">
+            <i class="fa fa-whatsapp"></i>
+        </div>
+        <div class="col-9">
+            Clique aqui!
+        </div>
+    </div>
+</a>
+<!-- API DESKTOP - GRANDE - >= 768px-->
+<span id="btn_close_whats" onclick="CloseLargeApi()">X</span>
+<a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp.html" class="whats-btn-large whatsapp-btn" id="whats-btn-large" target="_blank">
+    <div class="row">
+        <div>
+            <i class="fa fa-whatsapp"></i>
+        </div>
+        <div>
+            Clique aqui e Peça seu Orçamento!
+        </div>
+    </div>
+</a>
+<!-- API MOBILE - < 768px -->
+<a href="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/whatsapp-mobile.html" class="whatsapp-btn whats-mobile" target="_blank">
+    <div>
+        <i class="fa fa-whatsapp"></i>
+    </div>
+    <div>
+        Clique aqui e Peça seu Orçamento!
+    </div>
+</a>
+<!-- SCRIPT DE FECHAMENTO-->
+<script type="text/javascript">
+    function CloseLargeApi(){
+        document.getElementById("btn_close_whats").style.right = "-160px";
+        document.getElementById("whats-btn-large").style.right = "-160px";
+    }
+</script>
+</body>
+</html>
