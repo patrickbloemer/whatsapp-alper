@@ -1,3 +1,11 @@
+<!-- API 8.1 -->
+<?php 
+	$whatsapp = '+5541998146558'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK COM +55. EX: +5541996037176
+	$telefone_back = ' 04132466129'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK SEM +55. EX: 04133333333
+	$telefone_front = '(41) 3246-6129'; //DA FORMA QUE É PARA APARECER NA TELA. EX: (41) 3333-3333
+	$shortcode_email = '[contact-form-7 id="1768" title="Formulário de Contato"]'; //PEGAR O SHORTCODE DO FORMULÁRIO DO CONTACR FORMS 7
+	$url_site = 'https://forteazul.com.br'; //SEM BARRA. EX: https://forteazul.com.br
+?>
 <div id="api-contato">
 	<!-- E-MAIL -->
 	<script type="text/javascript">
@@ -239,6 +247,10 @@
 			transition-duration: .3s;
 		}
 		@media(max-width: 599px){
+			.api-infos-head {
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+			}
 			.api_whatsapp_mobile, .api_telefone_btn{
 				display: inline;
 			}
@@ -327,7 +339,7 @@
 			width: 190px;
 			position: fixed;
 			z-index: 999999;
-			bottom: 12px;
+			bottom: 8.5px;
 			border-radius: 2.5px;
 			right: 120px;
 			text-align: center;
@@ -368,8 +380,8 @@
 								<i class="fa fa-whatsapp"></i>
 							</div>
 							<div class="api-infos-body-card-btn">
-								<a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXXXXXXXXXXXXXXXXXX" target="_blank" class="api_whatsapp_mobile" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Nova conversa</a>
-								<a href="https://web.whatsapp.com/send?phone=XXXXXXXXXXXXXXXXXXXXXXXXXXX" target="_blank" class="api_whatsapp_desktop" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Nova conversa</a>
+								<a href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp; ?>" target="_blank" class="api_whatsapp_mobile" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Nova conversa</a>
+								<a href="https://web.whatsapp.com/send?phone=<?php echo $whatsapp; ?>" target="_blank" class="api_whatsapp_desktop" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});">Nova conversa</a>
 							</div>
 						</div>
 						<div class="col-sm-12 col-xs-12">
@@ -385,12 +397,12 @@
 								<i class="fa fa-phone"></i>
 							</div>
 							<div class="api-infos-body-card-btn">
-								<a href="tel:XXXXXXXXXXXXXXXXXXXXXXXXXXX" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1});">Nova Conversa</a>
+								<a href="tel:<?php echo $telefone_back; ?>" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1});">Nova Conversa</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<p class="api_telefone_footer"><i class="fa fa-phone"></i><b> Telefone: XXXXXXXXXXXXXXXXXXXXXXXXXXX</b></p>
+				<p class="api_telefone_footer"><i class="fa fa-phone"></i><b> Telefone: <?php echo $telefone_front; ?></b></p>
 			</div>
 		</div>
 		<!-- BOTÃO FLUTUANTE -->
@@ -432,7 +444,7 @@
 			<br>
 		</div>
 		<div class="sidebar_email_body">
-			<?php echo do_shortcode('XXXXXXXXXXXXXXXXXXXXXXXXXXX');?>
+			<?php echo do_shortcode($shortcode_email);?>
 		</div>
 		<!-- SCRIPTS -->
 		<script type="text/javascript">
@@ -468,7 +480,7 @@ if(isset($_COOKIE['fechado'])){
 		$('.close_api').click(function(){
 			var fechado = 'sim';
 			$.ajax({
-				url: "XXXXXXXXXXXXXXXXXXXXXXXXXXX/session.php",
+				url: "<?php echo $url_site; ?>/session.php",
 				dataType: "html",
 				type: "POST",
 				data: {
