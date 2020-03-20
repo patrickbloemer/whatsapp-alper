@@ -1,7 +1,1 @@
-﻿► Inserir o seguinte código na header.php, logo após a abertura da tag <body>
-
-<?php include 'api.txt'; ?>
-
-► Criar um arquivo com o mesmo nome e extensão nesta pasta e colar todo o código o "index.html" nele. Será puxado na header. Lembrar de trocar todas as variáveis no decorrer do código.
-
-► Fazer upload do "session.php" na raiz do site.
+﻿<?php include 'api.txt'; ?>
