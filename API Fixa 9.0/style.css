@@ -35,7 +35,7 @@
   position: fixed;
   right: 15px;
   bottom: 15px;
-  padding: 18px 25px;
+  padding: 25px;
   border-radius: 50%;
   font-size: 25px;
 }
@@ -179,10 +179,11 @@ span.close-floating-card:hover {
 }
 #floating-btn-open{
   cursor: pointer;
-  width: 71px;
+  width: 75px;
+  text-align: center;
 }
 #floating-btn-close {
-  padding: 15px 27px;
+  padding: 25px 30px;
   font-weight: 600;
   font-size: 30px;
 }
@@ -286,6 +287,7 @@ div#api_contato_sidebar_email {
   transition-property: all;
   transition-duration: .5s;
   right: -315px;
+  overflow-y: scroll;
 }
 body{
   margin: 0;
@@ -333,7 +335,7 @@ span.fechar_sidebar_email:hover {
 }
 /*FORMULARIO DE E-MAIL*/
 .api-contato input.wpcf7-form-control.wpcf7-submit {
-  background: rgba(30, 130, 76, 1); !important;
+  background: rgba(30, 130, 76, 1) !important;
   color: white !important;
   border-radius: 3px !important;
 }
@@ -356,5 +358,5 @@ i#iconID {
   width: 20px;
 }
 .floating-btn .fa-envelope-o{
-  margin-left: -2px;
+  margin-left: -4px;
 }
