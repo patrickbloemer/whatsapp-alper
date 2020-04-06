@@ -28,6 +28,7 @@
 
 		    		if (text.length > 1) {
 		    			var url_wpp = 'https://api.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
+		    			gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});
 		    			openInNewTab(url_wpp);
 		    		}else{
 		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
@@ -44,9 +45,9 @@
 		    	});
 		    	$('.floating-card-whatsapp-btn').click(function(){
 		    		var text = $.trim($("#z-depth").val());
-
 		    		if (text.length > 1) {
 		    			var url_wpp = 'https://web.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
+		    			gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});
 		    			openInNewTab(url_wpp);
 		    		}else{
 		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
@@ -81,7 +82,7 @@
 			<span>Enviar via</span>
 			<div class="floating-card-body-row">
 				<div class="column-6">
-					<a class="floating-card-whatsapp-btn" target="_blank" onclick="gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});"><i class="fa fa-whatsapp"></i>Whatsapp</a>
+					<a class="floating-card-whatsapp-btn" target="_blank"><i class="fa fa-whatsapp"></i>Whatsapp</a>
 				</div>
 				<div class="column-6">
 					<a href="#api_contato_email" class="floating-card-email-btn" onclick="abrir_sidebar_email();"><i class="fa fa-envelope"></i>E-mail</a>
