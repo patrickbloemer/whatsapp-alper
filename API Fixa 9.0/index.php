@@ -1,15 +1,65 @@
 <!-- VARIÁVEIS -->
 <?php
-	$whatsapp = 'xxxxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK COM +55. EX: +5541996037176
-	$telefone_back = 'xxxxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK SEM +55. EX: 04133333333
-	$telefone_front = 'xxxxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA APARECER NA TELA. EX: (41) 3333-3333
-	$shortcode_email = 'xxxxxxxxxxxxxxxxxxxxxxx'; //PEGAR O SHORTCODE DO FORMULÁRIO DO CONTACR FORMS 7
-	$url_site = 'xxxxxxxxxxxxxxxxxxxxxxx'; //SEM BARRA. EX: https://forteazul.com.br
+	$whatsapp = 'xxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK COM +55. EX: +5541996037176
+	$telefone_back = 'xxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA ESTAR DENTRO DO LINK SEM +55. EX: 04133333333
+	$telefone_front = 'xxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA APARECER NA TELA. EX: (41) 3333-3333
+	$shortcode_email = 'xxxxxxxxxxxxxxxxxxxxx'; //PEGAR O SHORTCODE DO FORMULÁRIO DO CONTACR FORMS 7
+	$url_site = 'xxxxxxxxxxxxxxxxxxxxx'; //SEM BARRA. EX: https://forteazul.com.br
 ?>
 <!-- CSS DA API -->
 <link rel="stylesheet" href="http://projetos.agenciaalper.com.br/seo/api/style.css">
 <!-- JS DA API -->
 <script type="text/javascript" src="http://projetos.agenciaalper.com.br/seo/api/js.js"></script>
+<script type="text/javascript">
+	/*INICIO MEDIA QUERY - CLIQUE DO WHATSAPP*/
+	jQuery(document).ready(function($){
+		function myFunctionAPI(x) {
+		    if (x.matches) { // If media query matches
+		    	function openInNewTab(url) {
+		    		var win = window.open(url, '_blank');
+		    		win.focus();
+		    	}
+		    	$('#z-depth').keyup(function(){
+		    		var text = $.trim($("#z-depth").val());
+		    		$('.wpcf7-form-control-wrap textarea').val(text);
+		    	});
+		    	$('.floating-card-whatsapp-btn').click(function(){
+		    		var text = $.trim($("#z-depth").val());
+
+		    		if (text.length > 1) {
+		    			var url_wpp = 'https://api.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
+		    			openInNewTab(url_wpp);
+		    		}else{
+		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
+		    		}
+		    	});
+		    } else {
+		    	function openInNewTab(url) {
+		    		var win = window.open(url, '_blank');
+		    		win.focus();
+		    	}
+		    	$('#z-depth').keyup(function(){
+		    		var text = $.trim($("#z-depth").val());
+		    		$('.wpcf7-form-control-wrap textarea').val(text);
+		    	});
+		    	$('.floating-card-whatsapp-btn').click(function(){
+		    		var text = $.trim($("#z-depth").val());
+
+		    		if (text.length > 1) {
+		    			var url_wpp = 'https://web.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
+		    			openInNewTab(url_wpp);
+		    		}else{
+		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
+		    		}
+		    	});
+		    }
+		}
+		var x = window.matchMedia("(max-width: 599px)")
+		  myFunctionAPI(x) // Call listener function at run time
+		  x.addListener(myFunctionAPI) // Attach listener function on state changes
+		});
+	/*FIM MEDIA QUERY - CLIQUE DO WHATSAPP*/
+</script>
 <!-- HTML DA API -->
 <div class="api-contato">
 	<div class="floating-card z-depth" id="floating-card">
@@ -75,17 +125,17 @@
 </div>
 <!-- COOKIE PARA FECHAMENTO PERMANENTE DA API -->
 <?php
-	if(isset($_COOKIE['fechado'])){
-		?>
-		<script type="text/javascript">
-			(function($) {
-				setTimeout(function(){
-					fechar_api_contato();
-				}, 1000);
-			})( jQuery );
-		</script>
-		<?php
-	}
+if(isset($_COOKIE['fechado'])){
+	?>
+	<script type="text/javascript">
+		(function($) {
+			setTimeout(function(){
+				fechar_api_contato();
+			}, 1000);
+		})( jQuery );
+	</script>
+	<?php
+}
 ?>
 <!-- APLICA COOKIE AO FECHAR A API -->
 <script type="text/javascript">
@@ -108,52 +158,4 @@
 			});
 		})
 	});
-	/*INICIO MEDIA QUERY - CLIQUE DO WHATSAPP*/
-	jQuery(document).ready(function($){
-	  function myFunctionAPI(x) {
-	    if (x.matches) { // If media query matches
-	      function openInNewTab(url) {
-	        var win = window.open(url, '_blank');
-	        win.focus();
-	      }
-	      $('#z-depth').keyup(function(){
-	        var text = $.trim($("#z-depth").val());
-	        $('.wpcf7-form-control-wrap textarea').val(text);
-	      });
-	      $('.floating-card-whatsapp-btn').click(function(){
-	        var text = $.trim($("#z-depth").val());
-
-	        if (text.length > 1) {
-	          var url_wpp = 'https://api.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
-	          openInNewTab(url_wpp);
-	        }else{
-	          alert("Por favor, digite a sua mensagem antes de tentar enviar!");
-	        }
-	      });
-	    } else {
-	      function openInNewTab(url) {
-	        var win = window.open(url, '_blank');
-	        win.focus();
-	      }
-	      $('#z-depth').keyup(function(){
-	        var text = $.trim($("#z-depth").val());
-	        $('.wpcf7-form-control-wrap textarea').val(text);
-	      });
-	      $('.floating-card-whatsapp-btn').click(function(){
-	        var text = $.trim($("#z-depth").val());
-
-	        if (text.length > 1) {
-	          var url_wpp = 'https://web.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
-	          openInNewTab(url_wpp);
-	        }else{
-	          alert("Por favor, digite a sua mensagem antes de tentar enviar!");
-	        }
-	      });
-	    }
-	  }
-	  var x = window.matchMedia("(max-width: 599px)")
-	  myFunctionAPI(x) // Call listener function at run time
-	  x.addListener(myFunctionAPI) // Attach listener function on state changes
-	});
-	/*FIM MEDIA QUERY - CLIQUE DO WHATSAPP*/
 </script>
