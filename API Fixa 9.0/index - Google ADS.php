@@ -5,7 +5,9 @@
 	$telefone_front = 'xxxxxxxxxxxxxxxxxxxxx'; //DA FORMA QUE É PARA APARECER NA TELA. EX: (41) 3333-3333
 	$shortcode_email = 'xxxxxxxxxxxxxxxxxxxxx'; //PEGAR O SHORTCODE DO FORMULÁRIO DO CONTACR FORMS 7
 	$url_site = 'xxxxxxxxxxxxxxxxxxxxx'; //SEM BARRA. EX: https://forteazul.com.br
-	$ads = 'xxxxxxxxxxxxxxxxxxxxx'; //GTAG DE CONVERSÃO DO GOOGLE ADS VIA CLIQUE. EX: gtag('event', 'conversion', {'send_to': 'AW-727862263/21nCCLzVl6UBEPeXidsC'});
+	$ads_email = 'xxxxxxxxxxxxxxxxxxxxx'; //GTAG DE CONVERSÃO DO GOOGLE ADS VIA CLIQUE. EX: gtag('event', 'conversion', {'send_to': 'AW-727862263/21nCCLzVl6UBEPeXidsC'});
+	$ads_whatsapp = 'xxxxxxxxxxxxxxxxxxxxx'; //GTAG DE CONVERSÃO DO GOOGLE ADS VIA CLIQUE. EX: gtag('event', 'conversion', {'send_to': 'AW-727862263/21nCCLzVl6UBEPeXidsC'});
+	$ads_telefone = 'xxxxxxxxxxxxxxxxxxxxx'; //GTAG DE CONVERSÃO DO GOOGLE ADS VIA CLIQUE. EX: gtag('event', 'conversion', {'send_to': 'AW-727862263/21nCCLzVl6UBEPeXidsC'});
 ?>
 <!-- CSS DA API -->
 <link rel="stylesheet" href="https://projetos.agenciaalper.com.br/seo/api/style.css">
@@ -15,7 +17,7 @@
 	// EVENTO DE CONVERSÃO - ENVIO DE E-MAIL PELO CONTACT FORMS 7
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 	  gtag('event', 'Envio', { 'event_category': 'Contato', 'event_label': 'Formulário', 'value': 1 });
-	  <?php echo $ads; ?>
+	  <?php echo $ads_email; ?>
 	  alert('Recebemos o seu e-mail! Estaremos lhe respondendo assim que possÍvel :)');
 	}, false );
 	// FIM CONVERSÃO E-MAIL
@@ -37,6 +39,7 @@
 		    		if (text.length > 1) {
 		    			var url_wpp = 'https://api.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
 		    			gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});
+	 					<?php echo $ads_whatsapp; ?>
 		    			openInNewTab(url_wpp);
 		    		}else{
 		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
@@ -56,6 +59,7 @@
 		    		if (text.length > 1) {
 		    			var url_wpp = 'https://web.whatsapp.com/send?l=pt_br&phone=<?php echo $whatsapp; ?>&text=' + text;
 		    			gtag('event', 'Clique', {'event_category':'Contato', 'event_label':'Whatsapp', 'value':1});
+		    			<?php echo $ads_whatsapp; ?>
 		    			openInNewTab(url_wpp);
 		    		}else{
 		    			alert("Por favor, digite a sua mensagem antes de tentar enviar!");
@@ -100,7 +104,7 @@
 						<span>Ou ligue para <b><?php echo $telefone_front; ?></b></span>
 						<div class="api-contato-telefone-mobile">
 							<span>Se preferir, ligue para nós!</span>
-							<a href="tel:<?php echo $telefone_back; ?>" class="api-contato-telefone-btn" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1});"><i class="fa fa-phone"></i>Ligar agora!</a>
+							<a href="tel:<?php echo $telefone_back; ?>" class="api-contato-telefone-btn" onclick="gtag('event', 'Ligação', {'event_category':'Contato', 'event_label':'Telefone', 'value':1}); <?php echo $ads_telefone; ?>"><i class="fa fa-phone"></i>Ligar agora!</a>
 						</div>
 					</div>
 				</div>
